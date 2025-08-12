@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+#include "AlertSubscriber.hpp"
+
+AlertSubscriber::AlertSubscriber(const std::string& id, const std::string& name) : id(id),name(name){}
+
+string AlertSubscriber::getId() const{
+	return this->id;
+}
+
+string AlertSubscriber::getName() const{
+	return this->name;
+}
+
+void AlertSubscriber::onMessage(Message &message){
+	// do some bussiness logic;
+}
