@@ -1,5 +1,6 @@
 #pragma once
 #include<bits/stdc++.h>
+using namespace std;
 
 class Message{
 private:
@@ -7,7 +8,7 @@ private:
 	time_t timestamp;
 
 public:
-	Message(const std::string& payload);
+	Message(const string& payload);
 
 	// getter and setter
 	string getPayload() const;

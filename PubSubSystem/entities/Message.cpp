@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 #include "Message.hpp"
 
-Message::Message(const std::string& payload): payload(payload){
+Message::Message(const string& payload): payload(payload){
 	timestamp = time(nullptr);
 }
 
