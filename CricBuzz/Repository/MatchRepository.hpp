@@ -3,6 +3,8 @@
 using namespace std;
 
 #include "Match.hpp"
+#include "Team.hpp"
+#include "PlayingFormat.hpp"
 
 class MatchRepository{
 private:
@@ -18,7 +20,10 @@ public:
 
 	static MatchRepository& getInstance();
 
+	Match* createNewMatch(const string& formatType,Team* team1,Team* team2);
 	void addMatch(Match* match);
 	Match* getMatchById(const string& matchId);	
 	vector<Match*> getAllMatches() const;
+private:
+	string generateMatchId();
 };

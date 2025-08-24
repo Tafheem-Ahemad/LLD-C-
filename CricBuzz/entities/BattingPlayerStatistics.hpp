@@ -7,11 +7,12 @@ using namespace std;
 
 class BattingPlayerStatistics : public PlayerStatistics{
 private:
+	const Player* player;
 	int runs;
 	int ballPlayed;
 	Player* wicketBy;
 public:
-	BattingPlayerStatistics();
+	BattingPlayerStatistics(const Player* player);
 
 	int getRuns() const;
 	int getBallPlayed() const;
@@ -19,9 +20,10 @@ public:
 	int addRuns(int runs);
 	int addBallPlayed();
 
-	void setWicketBy(Player* player);
-	void removeWicketBy();
+	void setWicketBy(const Player* player);
 	Player* getWicketBy() const;
+
+	Player* getPlayer() const;
 
 	void printStatistics() override;
 };

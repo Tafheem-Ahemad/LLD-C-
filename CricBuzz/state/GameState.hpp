@@ -7,8 +7,6 @@ using namespace std;
 
 class GameState{
 public:
-	virtual void startInning(Match* match) = 0;
-	virtual void endInning(Match* match) = 0;
 	virtual void updateGameState(Match* match,const Ball ball) = 0;
 	virtual string getStateName() const = 0;
 }

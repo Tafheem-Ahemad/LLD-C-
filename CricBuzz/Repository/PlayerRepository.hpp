@@ -18,8 +18,10 @@ public:
 
 	static PlayerRepository& getInstance();
 
-	void addPlayer(Player* player);
+	Player* createNewPlayer(const string& name, const year_month_day& dob, double height, double weight);
 	Player* getPlayerById(const string& playerId);	
 	vector<Player*> getAllPlayers() const;
+private:
+	string generatePlayerId();
 };
 

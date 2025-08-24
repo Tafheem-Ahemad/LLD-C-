@@ -7,8 +7,8 @@ using namespace std;
 
 class ODIFormat : public PlayingFormat{
 public:
-	const int getOvers() const override;
-	const void AddInning(const Match* match) override;
-	const int totalInning() const override;
-	const string  getFormatName() const override;
+	int getTotalOvers() const override;
+	void AddInning(const Match* match,Inning* inning) override;
+	int totalInning() const override;
+	string  getFormatName() const override;
 };

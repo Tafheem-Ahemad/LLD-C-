@@ -6,8 +6,8 @@ using namespace std;
 
 class PlayingFormat{
 public:
-	const int getOvers() const =0;
-	const void AddInning(const Match* match) =0;
-	const int totalInning() const =0;
-	const string  getFormatName() const =0;
+	virtual int getTotalOvers() const =0;
+	virtual void AddInning(const Match* match,Inning* inning) =0;
+	virtual int totalInning() const =0;
+	virtual string  getFormatName() const =0;
 };

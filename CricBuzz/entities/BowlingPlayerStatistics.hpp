@@ -7,16 +7,19 @@ using namespace std;
 
 class BowlingPlayerStatistics : public PlayerStatistics{
 private:
+	Player* player;
 	int ballThrow;
 	int getWickets;
 	int runsGiven;
 	vector<Player*> wicketedPlayers;
 public:
-	BowlingPlayerStatistics();
+	BowlingPlayerStatistics(Player* player);
+
+	Player* getPlayer() const;
 	int getBallThrow() const;
 	int getWickets() const;
 	int addBallThrow();
-	int addWickets(Player* player);
+	void addWicket(Player* player);
 	vector<Player*> getWicketedPlayers() const;
 	int getRunsGiven() const;
 	int addRunsGiven(int runs);

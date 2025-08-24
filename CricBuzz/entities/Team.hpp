@@ -10,7 +10,7 @@ private:
 	string name;
 	map<string,Player*>players;
 public:
-	Team();
+	Team(const string& name, const string& id);
 
 	void addPlayer(Player* player);
 	void removePlayer(Player* player);

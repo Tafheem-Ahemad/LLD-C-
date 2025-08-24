@@ -7,6 +7,7 @@ using namespace std;
 
 class Over{
 private:
+	int netBalls; // excluding wides and no balls
 	int totalRun;
 	int totalWickets;
 	vector<Ball>balls;
@@ -26,4 +27,6 @@ public:
 	vector<Player*> getWickets() const;
 	int getTotalBalls() const;
 	vector<Ball> getBalls() const;
+	bool isOverComplete() const;
+	int getNetBalls() const;
 };
