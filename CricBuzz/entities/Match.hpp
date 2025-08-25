@@ -63,6 +63,7 @@ public:
 	const GameState* getGameState() const;
 	const GameStatus getGameStatus() const;
 	const Team* getWinner() const;
+	const string getCurSrentStateName() const;
 	
 
 };

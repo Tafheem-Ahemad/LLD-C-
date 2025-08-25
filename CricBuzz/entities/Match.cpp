@@ -156,3 +156,6 @@ vector<Inning*> Match::getInnings() const{
 	return innings;
 }
 
+string Match::getCurSrentStateName() const{
+	return gameState->getStateName();
+}

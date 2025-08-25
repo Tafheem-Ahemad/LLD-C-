@@ -26,12 +26,12 @@ public:
 	static CricBuzzService& getInstance();
 
 	Match* createMatch(const Team* team1,const Team* team2,const string &format);
-	void addObserver(Observer* observer);
-	void removeObserver(Observer* observer);
+	void addObserver(const string matchId,Observer* observer);
+	void removeObserver(const string matchId,Observer* observer);
 	
 	void madeBall(const string& matchId,const Ball ball);
 	int getScore(const string& matchId);
-	string getMatchStatus(const string& matchId);
+	GameStatus getMatchStatus(const string& matchId);
 	vector<Match*> getAllMatches() const;
 
 	void startMatch(const string& matchId);
